@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Undangan Tahlilan 40 Hari</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Cormorant+Garamond:wght@300;400;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+*,*::before,*::after{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+:root{
+  --pink:#d88fa4;
+  --pink-light:#fff7f9;
+  --gold:#bd8982;
+  --text:#5b4450;
+  --muted:#8a7380;
+}
+
+html,body{
+  width:100%;
+  min-height:100%;
+
+  font-family:'Cormorant Garamond',serif;
+
+  background:
+  linear-gradient(
+    135deg,
+    #ebc6c6,
+    #bb7272,
+    #ffcbcb
+  );
+
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+
+  padding:12px;
+}
+
+.page{
+  width:100%;
+  max-width:620px;
+
+  background:rgba(255,255,255,.92);
+
+  border-radius:26px;
+
+  overflow:hidden;
+
+  border:1px solid rgba(255,255,255,.7);
+
+  backdrop-filter:blur(10px);
+
+  box-shadow:
+  0 10px 40px rgba(216,143,164,.22),
+  0 4px 14px rgba(0,0,0,.08);
+
+  position:relative;
+}
+
+/* CORNER */
+
+.pg-corner{
+  position:absolute;
+
+  width:22px;
+  height:22px;
+
+  border-style:solid;
+  border-color:var(--gold);
+
+  opacity:.5;
+}
+
+.pg-corner.tl{
+  top:14px;
+  left:14px;
+  border-width:2px 0 0 2px;
+}
+
+.pg-corner.tr{
+  top:14px;
+  right:14px;
+  border-width:2px 2px 0 0;
+}
+
+.pg-corner.br{
+  bottom:14px;
+  right:14px;
+  border-width:0 2px 2px 0;
+}
+
+/* TOP */
+
+.top-band{
+  background:
+  linear-gradient(
+    135deg,
+    #f7d8e2,
+    #882440,
+    #d6907e
+  );
+
+  padding:34px 24px 28px;
+
+  text-align:center;
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.top-band::before{
+  content:'';
+
+  position:absolute;
+
+  top:-70px;
+  left:-70px;
+
+  width:220px;
+  height:220px;
+
+  border:1px solid rgba(255,255,255,.2);
+
+  border-radius:50%;
+}
+
+.top-band::after{
+  content:'';
+
+  position:absolute;
+
+  bottom:-80px;
+  right:-80px;
+
+  width:240px;
+  height:240px;
+
+  border:1px solid rgba(255,255,255,.15);
+
+  border-radius:50%;
+}
+
+.band-frame{
+  position:absolute;
+
+  inset:14px;
+
+  border:1px solid rgba(255,255,255,.35);
+
+  border-radius:22px;
+}
+
+.band-frame::after{
+  content:'';
+
+  position:absolute;
+
+  inset:8px;
+
+  border:1px solid rgba(255,255,255,.15);
+
+  border-radius:18px;
+}
+
+.bism{
+  font-family:'Aref Ruqaa',serif;
+
+  font-size:24px;
+
+  color:#fff;
+
+  margin-bottom:16px;
+
+  position:relative;
+  z-index:1;
+}
+
+.label{
+  display:inline-block;
+
+  font-size:9px;
+
+  letter-spacing:4px;
+
+  text-transform:uppercase;
+
+  color:#fff;
+
+  border-top:1px solid rgba(255,255,255,.6);
+  border-bottom:1px solid rgba(255,255,255,.6);
+
+  padding:5px 18px;
+
+  margin-bottom:18px;
+
+  position:relative;
+  z-index:1;
+}
+
+.title{
+  font-family:'Playfair Display',serif;
+
+  font-size:38px;
+
+  color:#fff;
+
+  margin-bottom:4px;
+
+  position:relative;
+  z-index:1;
+}
+
+.subtitle{
+  font-size:15px;
+
+  font-style:italic;
+
+  color:rgba(255,255,255,.92);
+
+  margin-bottom:22px;
+
+  position:relative;
+  z-index:1;
+}
+
+/* ORNAMENT */
+
+.orn{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  gap:10px;
+
+  margin-bottom:22px;
+
+  position:relative;
+  z-index:1;
+}
+
+.orn-line{
+  width:60px;
+  height:1px;
+
+  background:
+  linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,.8)
+  );
+}
+
+.orn-line.r{
+  background:
+  linear-gradient(
+    to left,
+    transparent,
+    rgba(255,255,255,.8)
+  );
+}
+
+.orn-diamond{
+  width:8px;
+  height:8px;
+
+  background:#fff;
+
+  transform:rotate(45deg);
+}
+
+/* FOTO */
+
+.foto-wrap{
+  width:100px;
+  height:100px;
+
+  margin:auto auto 16px;
+
+  position:relative;
+
+  z-index:1;
+}
+
+.foto-ring{
+  position:absolute;
+  inset:-6px;
+
+  border-radius:50%;
+
+  border:1px solid rgba(255,255,255,.8);
+}
+
+.foto-ring2{
+  position:absolute;
+  inset:-10px;
+
+  border-radius:50%;
+
+  border:1px solid rgba(255,255,255,.25);
+}
+
+.foto-circle{
+  width:100px;
+  height:100px;
+
+  border-radius:50%;
+
+  overflow:hidden;
+
+  border:4px solid rgba(255,255,255,.85);
+
+  background:rgba(255,255,255,.15);
+}
+
+.foto-circle img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* NAME */
+
+.name{
+  font-family:'Playfair Display',serif;
+
+  font-size:30px;
+
+  color:#fff;
+
+  position:relative;
+  z-index:1;
+}
+
+.name-sub{
+  font-size:12px;
+
+  letter-spacing:1px;
+
+  color:rgba(255,255,255,.9);
+
+  margin-top:5px;
+
+  position:relative;
+  z-index:1;
+}
+
+/* AYAT */
+
+.ayat-strip{
+  background:#fff1f5;
+
+  padding:18px 22px;
+
+  text-align:center;
+
+  border-top:1px solid rgba(201,162,77,.25);
+  border-bottom:1px solid rgba(201,162,77,.25);
+}
+
+.arab{
+  font-family:'Aref Ruqaa',serif;
+
+  font-size:20px;
+
+  color:var(--gold);
+
+  direction:rtl;
+
+  margin-bottom:6px;
+}
+
+.terjemah{
+  font-size:11px;
+
+  color:var(--muted);
+
+  font-style:italic;
+
+  line-height:1.6;
+}
+
+/* BODY */
+
+.body{
+  padding:26px 22px;
+}
+
+/* INTRO */
+
+.intro{
+  text-align:center;
+
+  margin-bottom:24px;
+}
+
+.salam{
+  font-size:9px;
+
+  letter-spacing:4px;
+
+  text-transform:uppercase;
+
+  color:var(--gold);
+
+  margin-bottom:12px;
+}
+
+.intro p{
+  font-size:15px;
+
+  line-height:1.7;
+
+  color:var(--muted);
+}
+
+.intro strong{
+  color:var(--text);
+}
+
+/* RULE */
+
+.h-rule{
+  display:flex;
+  align-items:center;
+
+  gap:12px;
+
+  margin:22px 0;
+}
+
+.h-rule::before,
+.h-rule::after{
+  content:'';
+
+  flex:1;
+  height:1px;
+
+  background:
+  linear-gradient(
+    to right,
+    transparent,
+    rgba(201,162,77,.45),
+    transparent
+  );
+}
+
+.h-rule span{
+  color:var(--gold);
+}
+
+/* INFO */
+
+.info-row{
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:14px;
+
+  margin-bottom:14px;
+}
+
+.info-box{
+  background:#fff;
+
+  border-radius:18px;
+
+  padding:18px;
+
+  border-top:3px solid var(--gold);
+
+  border:1px solid rgba(201,162,77,.18);
+
+  box-shadow:
+  0 4px 14px rgba(216,143,164,.08);
+
+  text-align:center;
+}
+
+.info-box.full{
+  grid-column:1/-1;
+
+  display:flex;
+  flex-direction:column;
+
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
+
+  gap:12px;
+
+  padding:20px;
+
+  border-radius:22px;
+}
+
+.ib-icon{
+  font-size:22px;
+
+  margin-bottom:8px;
+}
+
+.ib-label{
+  font-size:9px;
+
+  letter-spacing:3px;
+
+  text-transform:uppercase;
+
+  color:var(--gold);
+
+  margin-bottom:6px;
+}
+
+.ib-val{
+  font-family:'Playfair Display',serif;
+
+  font-size:16px;
+
+  color:var(--text);
+
+  line-height:1.4;
+}
+
+.ib-sub{
+  font-size:12px;
+
+  color:var(--muted);
+
+  margin-top:4px;
+
+  line-height:1.5;
+}
+
+.custom-calendar{
+  width:30px;
+  height:34px;
+
+  margin:auto auto 6px;
+
+  border-radius:7px;
+
+  overflow:hidden;
+
+  background:#fff;
+
+  border:1px solid rgba(201,162,77,.22);
+
+  box-shadow:
+  0 2px 6px rgba(0,0,0,.05);
+}
+
+.cal-top{
+  height:10px;
+
+  background:
+  linear-gradient(
+    90deg,
+    #d88fa4,
+    #c9a24d
+  );
+
+  color:#fff;
+
+  font-size:5px;
+
+  letter-spacing:.5px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-weight:600;
+}
+
+.cal-number{
+  height:24px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-family:'Playfair Display',serif;
+
+  font-size:13px;
+
+  color:var(--gold);
+
+  font-weight:700;
+}
+
+/* KELUARGA */
+
+.keluarga-title{
+  font-family:'Playfair Display',serif;
+
+  font-size:13px;
+
+  font-style:italic;
+
+  text-align:center;
+
+  color:var(--muted);
+
+  margin-top:28px;
+  margin-bottom:18px;
+}
+
+.ttd-grid{
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:22px;
+
+  margin-top:10px;
+}
+
+.ttd{
+  text-align:center;
+}
+
+.role{
+  font-size:8px;
+
+  letter-spacing:1.5px;
+
+  text-transform:uppercase;
+
+  color:var(--gold);
+
+  margin-bottom:8px;
+
+  font-weight:400;
+}
+
+.ttd-line{
+  width:100%;
+  height:1px;
+
+  background:rgba(201,162,77,.35);
+
+  margin-bottom:4px;
+}
+
+.nama{
+  font-family:'Cormorant Garamond',serif;
+
+  color:var(--text);
+
+  font-size:9px;
+
+  font-weight:400;
+}
+
+/* BOTTOM */
+
+.bottom-band{
+  background:
+  linear-gradient(
+    135deg,
+    #f7d8e2,
+    #882440,
+    #d6907e
+  );
+
+  padding:20px 18px;
+
+  text-align:center;
+
+  margin-top:28px;
+}
+
+.bottom-band p{
+  color:#fff;
+
+  font-size:10px;
+
+  letter-spacing:2px;
+
+  text-transform:uppercase;
+
+  line-height:1.7;
+}
+
+.footer-gem{
+  margin:0 6px;
+}
+
+
+
+/* RESPONSIVE */
+
+@media(max-width:720px){
+
+  html,body{
+    padding:8px;
+  }
+
+  .page{
+    border-radius:20px;
+  }
+
+  .top-band,
+  .body,
+  .ayat-strip,
+  .bottom-band{
+    padding-left:18px;
+    padding-right:18px;
+  }
+
+  .title{
+    font-size:30px;
+  }
+
+  .name{
+    font-size:24px;
+  }
+
+  .info-row{
+    grid-template-columns:1fr;
+  }
+
+  .ttd-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+  }
+
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+  <span class="pg-corner tl"></span>
+  <span class="pg-corner tr"></span>
+  <span class="pg-corner br"></span>
+
+  <!-- TOP -->
+  <div class="top-band">
+
+    <div class="band-frame"></div>
+
+    <div class="bism">
+      بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
+    </div>
+
+    <div class="label">
+      Undangan Tahlilan · 40 Hari
+    </div>
+
+    <div class="title">
+      Tahlilan 40 Hari
+    </div>
+
+    <div class="subtitle">
+      Wafatnya Almarhumah
+    </div>
+
+    <div class="orn">
+      <span class="orn-line"></span>
+      <span class="orn-diamond"></span>
+      <span class="orn-line r"></span>
+    </div>
+
+    <!-- FOTO -->
+    <div class="foto-wrap">
+
+      <div class="foto-ring"></div>
+      <div class="foto-ring2"></div>
+
+      <div class="foto-circle">
+
+        <!-- GANTI NAMA FILE FOTO DI SINI -->
+        <img
+          src="img/foto.jpeg"
+          alt="Foto Almarhumah"
+        >
+
+      </div>
+
+    </div>
+
+    <div class="name">
+      SINTA
+    </div>
+
+    <div class="name-sub">
+      Binti Sapri Kara
+    </div>
+    
+  </div>
+
+  <!-- AYAT -->
+  <div class="ayat-strip">
+
+    <div class="arab">
+      إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ
+    </div>
+
+    <div class="terjemah">
+      Sesungguhnya kami milik Allah dan kepada-Nya kami kembali
+    </div>
+    <div class="terjemah">
+      Q.S. Al-Baqarah: 156
+    </div>
+
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+
+    <!-- INTRO -->
+    <div class="intro">
+
+      <div class="salam">
+        <strong>Assalamu'alaikum Wr.Wb.</strong>
+      </div>
+
+      <p>
+        Dengan memanjatkan puji syukur kehadirat Allah SWT,
+        kami keluarga besar
+        Almarhumah Sinta
+        bermaksud menyelenggarakan acara doa bersama
+        Tahlilan 40 Hari
+        atas wafatnya Almarhumah.
+        Maka dengan penuh harap dan segala kerendahan hati
+        kami mengundang Bapak/Ibu/Saudara/i
+        untuk hadir bersama serta memanjatkan doa
+        untuk Almarhumah Sinta Binti Sapri Kara agar mendapatkan tempat terbaik
+        di sisi Allah SWT.
+      </p> 
+
+    </div>
+
+    <div class="h-rule">
+      <span>✦</span>
+    </div>
+
+    <!-- LOKASI -->
+    <div class="info-row">
+
+      <div class="info-box full">
+
+        <div class="ib-icon">📍</div>
+
+        <div>
+
+          <div class="ib-label">
+            Lokasi
+          </div>
+
+          <div class="ib-val">
+            Kediaman Orang Tua Almh.Sinta
+          </div>
+
+          <div class="ib-sub">
+            Jl. Cemara VII Lrg.Topogade
+          </div>
+          <div class="ib-sub">
+            Palu Barat — Sulawesi tengah
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- HARI & WAKTU -->
+    <div class="info-row">
+
+      <div class="info-box">
+
+        <div class="ib-icon custom-calendar">
+
+          <div class="cal-top">
+            JUNI
+          </div>
+
+          <div class="cal-number">
+            6
+          </div>
+
+        </div>
+
+        <div class="ib-label">
+          Hari & Tanggal
+        </div>
+
+        <div class="ib-val">
+          Sabtu, 6 juni 2026
+        </div>
+
+        <div class="ib-sub">
+          Tepat 40 Hari Kepergian Beliau
+        </div>
+
+      </div>
+
+      <div class="info-box">
+
+        <div class="ib-icon">🕕</div>
+
+        <div class="ib-label">
+          Waktu
+        </div>
+
+        <div class="ib-val">
+          19.20 WITA
+        </div>
+
+        <div class="ib-sub">
+          Ba'da Isya
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- KELUARGA -->
+    <div class="keluarga-title">
+      - Diselenggarakan oleh Keluarga Besar -
+    </div>
+
+    <div class="ttd-grid">
+
+      <div class="ttd">
+        <div class="role">Suami</div>
+        <div class="ttd-line"></div>
+        <div class="nama">Mohd. Syam Bin Zainal Abidin Au</div>
+      </div>
+
+      <div class="ttd">
+        <div class="role">Anak</div>
+        <div class="ttd-line"></div>
+        <div class="nama">Mohammad Shaquille Akasyah Au</div>
+      </div>
+
+      <div class="ttd">
+        <div class="role">Orang Tua Almh</div>
+        <div class="ttd-line"></div>
+        <div class="nama">Sapri Kara / Sartin Latif</div>
+      </div>
+
+      <div class="ttd">
+        <div class="role">Kakak / Ipar</div>
+        <div class="ttd-line"></div>
+        <div class="nama">Inovi Sapri Kara / Iswadin</div>
+      </div>
+
+      <div class="ttd">
+        <div class="role">Kakak / Ipar </div>
+        <div class="ttd-line"></div>
+        <div class="nama">Novita Sari / Moh. Farid</div>
+      </div>
+
+      <div class="ttd">
+        <div class="role">Adik</div>
+        <div class="ttd-line"></div>
+        <div class="nama">Suci Rahmadani Sapri Kara</div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="bottom-band">
+
+    <p>
+      Tahlilan 40 Hari
+      <span class="footer-gem">✦</span>
+      Almh. Sinta Binti Sapri Kara
+      <span class="footer-gem">✦</span>
+      Lahir 1999 – Wafat 2026
+    </p>
+
+  </div>
+
+</div>
+
+</body>
+</html>
